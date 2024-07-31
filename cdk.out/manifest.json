@@ -1,0 +1,107 @@
+{
+  "version": "36.0.0",
+  "artifacts": {
+    "CoreAssetTrackerBackendStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "CoreAssetTrackerBackendStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "CoreAssetTrackerBackendStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "CoreAssetTrackerBackendStack.template.json",
+        "terminationProtection": false,
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-deploy-role-${AWS::AccountId}-${AWS::Region}",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-cfn-exec-role-${AWS::AccountId}-${AWS::Region}",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}/59eaf96aedeea2bb8ff256ee0333fb297ae1cdcc87b7bc3e326addbb8eb37749.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "CoreAssetTrackerBackendStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-lookup-role-${AWS::AccountId}-${AWS::Region}",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        }
+      },
+      "dependencies": [
+        "CoreAssetTrackerBackendStack.assets"
+      ],
+      "metadata": {
+        "/CoreAssetTrackerBackendStack/coreAssetTracker-userPool/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coreAssetTrackeruserPool5FEFA2EF"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/coreAssetTracker-userPool/coreAssetTracker-domain/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coreAssetTrackeruserPoolcoreAssetTrackerdomainD52F5D0F"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/coreAssetTracker-userPoolClient/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coreAssetTrackeruserPoolClient0BF1195F"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/coreAssetTracker-userPoolId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coreAssetTrackeruserPoolId"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/coreAssetTracker-userPoolClientId": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coreAssetTrackeruserPoolClientId"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/coreAssetTracker-domainName": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "coreAssetTrackerdomainName"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/CoreAssetTrackerBackendStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "CoreAssetTrackerBackendStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

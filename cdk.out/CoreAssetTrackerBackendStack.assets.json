@@ -1,0 +1,19 @@
+{
+  "version": "36.0.0",
+  "files": {
+    "59eaf96aedeea2bb8ff256ee0333fb297ae1cdcc87b7bc3e326addbb8eb37749": {
+      "source": {
+        "path": "CoreAssetTrackerBackendStack.template.json",
+        "packaging": "file"
+      },
+      "destinations": {
+        "current_account-current_region": {
+          "bucketName": "cdk-hnb659fds-assets-${AWS::AccountId}-${AWS::Region}",
+          "objectKey": "59eaf96aedeea2bb8ff256ee0333fb297ae1cdcc87b7bc3e326addbb8eb37749.json",
+          "assumeRoleArn": "arn:${AWS::Partition}:iam::${AWS::AccountId}:role/cdk-hnb659fds-file-publishing-role-${AWS::AccountId}-${AWS::Region}"
+        }
+      }
+    }
+  },
+  "dockerImages": {}
+}
